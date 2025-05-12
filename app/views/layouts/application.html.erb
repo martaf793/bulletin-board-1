@@ -13,8 +13,12 @@
   <body>
     <a href="/">Bulletin Board </a>
     <hr>
-    <div><%= notice %></div>
-    <div><%= alert %></div>
+    <% if notice.present? %>
+     <div><%= notice %></div>
+    <% end%>
+    <% if alert.present? %>
+      <div><%= alert %></div>
+    <% end%>
     <hr>
     <%= yield %>
   </body>
